@@ -43,7 +43,7 @@ logging.basicConfig(
 )
 
 # Auth Users
-AUTH_USERS = [ int(chat) for chat in Config.AUTH_USERS.split(",") if chat != '']
+AUTH_USERS = [int(chat) for chat in Config.AUTH_USERS.split(",") if chat != '']
 
 # Prefixes 
 prefixes = ["/", "~", "?", "!"]
@@ -66,5 +66,5 @@ if __name__ == "__main__" :
         LOGGER.info(f"<--- @{bot_info.username} Started (c) STARKBOT --->")
         await idle()
     
-    asyncio.get_event_loop().run_until_complete(main())
+    asyncio.get_loop().run_until_complete(main())
     LOGGER.info(f"<---Bot Stopped-->")
